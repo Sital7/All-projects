@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Swap</title>
+</head>
+<body>
+    <script>
+        // var
+        function demoVar() {
+        console.log(x); 
+        var x = 10;
+        console.log(x); // 10
+        }
+        demoVar();
+
+        // example2:
+        function legacyExample() {
+        for (var i = 0; i < 3; i++) {
+        console.log(i);
+        }
+        console.log(i); // 3 (accessible outside the loop)
+        }
+        legacyExample();
+
+
+        // let
+        function demoLet() {
+        // console.log(y); // ReferenceError: Cannot access 'y' before initialization (TDZ)
+        let y = 20;
+        console.log(y); // 20
+        }
+        demoLet();
+
+        // example2:
+        for (let i = 0; i < 3; i++) {
+        console.log(i);
+        }
+        // console.log(i); // ReferenceError: i is not defined
+
+
+        // const eg:
+        const person = { name: "Alice", age: 30 };
+        person.age = 31; // Allowed (object properties can be modified)
+        console.log(person); // { name: "Alice", age: 31 }
+
+
+        let a = 5;
+        let b = 10;
+
+        console.log("Before Swap: a =", a, ", b =", b);
+
+        //Swapping without a third variable
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        console.log("After Swap: a =", a, ", b =", b);
+
+
+    // To swap two numbers using a third variable, we temporarily store one 
+    // of the numbers in the third variable, then overwrite it with the other number.
+
+    // let a = 5;
+    // let b = 10;
+
+    // console.log(`Before Swap: a = ${a}, b = ${b}`);
+
+    // // Using a third variable
+    // let temp = a;
+    // a = b;
+    // b = temp;
+
+    // console.log(`After Swap: a = ${a}, b = ${b}`);
+
+
+
+    // swap numbers without using a third variable by leveraging arithmetic operations or bitwise XOR.
+    // Method 1: Using Addition and Subtraction
+
+        let x = 5;
+        let y = 10;
+
+        console.log(`Before Swap: x = ${x}, y = ${y}`);
+
+        // Swap without a third variable
+        x = x + y; // x now becomes 15
+        y = x - y; // y becomes 5 
+        x = x - y; // x becomes 10 
+
+        console.log(`After Swap: x = ${x}, y = ${y}`);
+
+
+
+        // Method 2 : Using Bitwise XOR
+        let p = 5;
+        let q = 10;
+
+        console.log(`Before Swap: p = ${p}, q = ${q}`);
+
+        // Swap without a third variable
+        p = p ^ q; 
+        q = p ^ q; 
+        p = p ^ q; 
+
+        console.log(`After Swap: p = ${p}, q = ${q}`);
+
+
+
+        // Commonly Used Methods for Manipulating Strings in JavaScript
+        // length : Returns the number of characters in a string.
+        const str = "Hello, World!";
+        console.log(str.length); // Output: 13
+
+
+
+        // toUpperCase() and toLowerCase() : converts a string to uppercase or lowercase
+
+        const str = "Hello, World!";
+        console.log(str.toUpperCase()); // Output: "HELLO, WORLD!"
+        console.log(str.toLowerCase()); // Output: "hello, world!"
+
+        // charAt() : Returns the character at a specified index
+
+        const str = "Hello";
+        console.log(str.charAt(0)); // Output: "H"
+        console.log(str.charAt(4)); // Output: "o"
+
+        // indexOf() and lastIndexOf() : Finds the index of the first or last occurrence of a specified substring.
+
+        const str = "JavaScript is fun";
+        console.log(str.indexOf("is")); // Output: 11
+        console.log(str.lastIndexOf("a")); // Output: 3
+
+
+        // slice() : Extracts a section of a string and returns it as a new string.
+
+        const str = "Hello, World!";
+        console.log(str.slice(7, 12)); // Output: "World"
+        console.log(str.slice(-6));    // Output: "World!"
+
+
+        // substring() : Similar to slice() but doesn't accept negative indices.
+
+        const str = "Hello, World!";
+        console.log(str.substring(7, 12)); // Output: "World"
+
+        // replace() : Replaces a specified substring with another.
+
+        const str = "JavaScript is fun";
+        console.log(str.replace("fun", "awesome")); // Output: "JavaScript is awesome"
+
+
+        // split() : Splits a string into an array of substrings based on a delimiter.
+
+        const str = "apple,banana,cherry";
+        console.log(str.split(",")); // Output:["apple", "banana", "cherry"]
+
+
+        // trim() : Removes whitespace from both ends of a string.
+        const str = "   Hello, World!   ";
+        console.log(str.trim()); // Output: "Hello, World!"
+
+
+        // concat() : Joins two or more strings.
+
+        const str1 = "Hello";
+        const str2 = "World";
+        console.log(str1.concat(", ", str2, "!")); // Output: "Hello, World!"
+
+
+
+        // Loose Equality (==)
+        console.log(5 == "5"); // true
+        console.log(true == 1); // true 
+        console.log(null == undefined); // true 
+        console.log(" " == 0); // true 
+
+
+        // Strict Equality (===)
+        console.log(5 === "5"); // false 
+        console.log(true === 1); // false 
+        console.log(null === undefined); // false 
+        console.log(" " === 0); // false 
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+    body{
+    text-align: center;
+}
+.count{
+    font-size: 3rem;
+
+}
+.minus-btn, .plush-btn, .reset{
+    padding: 10px 16px;
+    background-color: cyan;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.incDec{
+    height: 2rem;
+    width: 5rem;
+    font-size: 1rem;
+    margin: 16px 8px;
+}

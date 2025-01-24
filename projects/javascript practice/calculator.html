@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .calculator{
+            border-radius: 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0.1);
+            
+        }
+
+        .display{
+            width: 88%;
+            height: 50%;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            text-align: right;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+
+        .button{
+            height: 50px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: blue;
+            transition: background-color 0.2sec;
+            height: 80%;
+            width: 100%;
+        }
+        button:hover{
+            background-color: #ddd;
+        }
+
+        button.operator{
+            background-color: antiquewhite;
+            height: 50px;
+            width: 100%;  
+            border-radius: 8px;
+        }
+
+        button.clear{
+            background-color: antiquewhite;
+            border-radius: 8px;
+        }
+        button.equals{
+            background-color: antiquewhite;
+            border-radius: 8px;
+        }
+
+        .number {
+            height: 50px; 
+            font-size: 1.5em;
+            width: 100%; 
+            border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button class="number" onclick="appendNumber('7')">7</button>
+            <button class="number" onclick="appendNumber('8')">8</button>
+            <button class="number" onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+ 
+            <button class="number" onclick="appendNumber('4')">4</button>
+            <button class="number" onclick="appendNumber('5')">5</button>
+            <button class="number" onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('*')">*</button>
+ 
+            <button class="number" onclick="appendNumber('1')">1</button>
+            <button class="number" onclick="appendNumber('2')">2</button>
+            <button class="number" onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+ 
+            <button class="number" onclick="appendNumber('0')">0</button>
+            <button class="number" onclick="appendNumber('.')">.</button>
+            <button class="clear" onclick="clearDisplay()">A/C</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+ 
+            <button class="operator" onclick="calculateSquare()">^</button>
+            <button class="equals" style="grid-column: span 3;" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+ 
+    <script>
+        let display = document.getElementById("display");
+ 
+        function appendNumber(number) {
+            display.value += number;
+        }
+ 
+        function appendOperator(operator) {
+            const lastChar = display.value[display.value.length - 1];
+            if ("+-*/".includes(lastChar)) {
+                display.value = display.value.slice(0, -1); // Replace the last operator
+            }
+            display.value += operator;
+        }
+ 
+        function clearDisplay() {
+            display.value = "";
+        }
+ 
+        function calculateResult() {
+            try {
+                display.value = eval(display.value); // Evaluate the expression
+            } catch (error) {
+                display.value = "Error"; // Handle invalid input
+            }
+        }
+ 
+        function calculateSquare() {
+            try {
+                let currentValue = parseFloat(display.value);
+                if (!isNaN(currentValue)) {
+                    display.value = currentValue ** 2; // Square the number
+                } else {
+                    display.value = "Error"; // Handle invalid input
+                }
+            } catch (error) {
+                display.value = "Error"; // Handle other errors
+            }
+        }
+    </script>
+</body>
+</html>

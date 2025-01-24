@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#Home"><span>Home</span></a>
+        <a href="#About Us"><span>About Us</span></a>
+        <a href="#Our Rooms"><span>Our Rooms</span></a>
+        <a href="#Contact"><span>Contact</span></a>
+        <a href="#Gallery"><span>Gallery</span></a>
+        <a href="#Blog"><span>Blog</span></a>
+    </nav>
+
+    <div id="Home">
+        <img src="assets/pic.png" alt="Home">
+        <h1>Red Cap Resort</h1>
+    </div>
+
+    <div id="About Us">
+        <h2>About Us</h2>
+        <div class="about-text">
+            <p>
+                Welcome to Red Cap Resort, a sanctuary of luxury and tranquility located amidst the most serene settings. 
+                We are dedicated to offering our guests an unparalleled experience of relaxation and elegance. 
+                With world-class facilities and exceptional services, our resort is perfect for family vacations, 
+                romantic getaways, and business retreats. At Red Cap Resort, every moment is crafted to create unforgettable memories.
+            </p>
+        </div>
+        <img src="assets/ppppp.png" alt="About">
+    </div>
+
+    <div id="Our Rooms">
+        <h1>Our Rooms</h1>
+        <div class="rooms-container">
+            <!-- Room 1 -->
+            <div class="room-card">
+                <img src="assets/room1.png" alt="Room 1" class="room-image">
+                <div class="room-details">
+                    <h3 class="room-name">Deluxe Room</h3>
+                    <p class="room-price">Rs. 12,000 / Night</p>
+                    <a href="#" class="room-button" onclick="redirectToLogin()">Book Now</a>
+                </div>
+            </div>
+            <!-- Room 2 -->
+            <div class="room-card">
+                <img src="assets/room2.png" alt="Room 2" class="room-image">
+                <div class="room-details">
+                    <h3 class="room-name">Suite Room</h3>
+                    <p class="room-price">Rs. 25,000 / Night</p>
+                    <a href="#" class="room-button" onclick="redirectToLogin()">Book Now</a>
+                </div>
+            </div>
+            <!-- Room 3 -->
+            <div class="room-card">
+                <img src="assets/room3.png" alt="Room 3" class="room-image">
+                <div class="room-details">
+                    <h3 class="room-name">Standard Room</h3>
+                    <p class="room-price">Rs. 9,000 / Night</p>
+                    <a href="#" class="room-button" onclick="redirectToLogin()">Book Now</a>
+                </div>
+            </div>
+            <!-- Room 4 -->
+            <div class="room-card">
+                <img src="assets/room4.png" alt="Room 4" class="room-image">
+                <div class="room-details">
+                    <h3 class="room-name">Couple Room</h3>
+                    <p class="room-price">Rs. 15,000 / Night</p>
+                    <a href="#" class="room-button" onclick="redirectToLogin()">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> redcapresort@gmail.com</p>
+            <p><strong>Phone:</strong> 9818280777</p>
+            <p><strong>Address:</strong> Tile Ghar, Dhading, Nepal</p>
+        </div>
+    </div>
+
+    <!-- Google Map Embed -->
+    <div class="map">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.020970918079!2d85.2806539!3d27.6931052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb187a97f390b1%3A0xec3f47092df0d4ca!2sKalanki%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1700397361258!5m2!1sen!2snp" 
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>  
+
+    <footer>
+        <p>&copy; 2024 Red Cap Resort. All rights reserved.</p>
+
+        <!-- Footer Sections -->
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>Reservation</h3>
+                <ul>
+                    <li><a href="#Our Rooms">Book a Room</a></li>
+                    <li><a href="#Contact">Contact Reservation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="tel:+9818280777">Call Us</a></li>
+                    <li><a href="mailto:redcapresort@gmail.com">Email Us</a></li>
+                    <li><a href="#Contact">Contact Form</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Explore More</h3>
+                <ul>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#Our Rooms">Our Rooms</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToLogin() {
+            var isLoggedIn = false; 
+
+            if (!isLoggedIn) {
+                window.location.href = 'login.html'; 
+            } else {
+                window.location.href = 'booking.html'; 
+            }
+        }
+    </script>
+</body>
+</html>

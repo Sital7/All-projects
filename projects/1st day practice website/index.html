@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        /* Styling for the navigation bar */
+        nav {
+            background-color: #001f3f; /* Dark blue */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #004080; /* Lighter blue on hover */
+        }
+
+        nav a span {
+            font-weight: bold;
+        }
+
+        /* General body styling */
+        body {
+            background-color: #001f3f; /* Dark blue theme */
+            color: white; /* White text */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the Home section */
+        #Home {
+            position: relative;
+            text-align: center;
+        }
+
+        #Home img {
+            width: 100%;
+            height: auto;
+        }
+
+        #Home h1 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Styling for the About Us section */
+
+        #About\ Us {
+            background-color: #002b5c; /* Slightly lighter blue */
+            padding: 20px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+       .about-content {
+           display: flex;
+           justify-content: space-between;
+           width: 100%;
+           gap: 20px;
+        }
+
+        .text-content {
+            width: 60%; /* Adjust width to leave space for the image */
+            color: #f0f0f0; /* Light gray text */
+        }
+
+        .text-content h2 {
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .text-content p {
+            font-size: 18px;
+            text-align: justify;
+            margin: 0;
+        }
+
+        .text-content ul, .text-content ol {
+            margin-top: 15px;
+        }
+
+        .image-content {
+            width: 40%; /* Adjust width for the image */
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .image-content img {
+            width: 100%;
+            height: 80%;
+            border-radius: 5px;
+        }
+
+
+        /* Styling for the Contact section */
+        #Contact {
+            background-color: #002b5c;
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        #Contact h1 {
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        #Contact label {
+            font-size: 18px;
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #Contact input, #Contact select, #Contact button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #004080;
+            border-radius: 5px;
+            background-color: #001f3f;
+            color: white;
+            font-size: 16px;
+        }
+
+        #Contact button {
+            background-color: white;
+            color: #001f3f;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #Contact button:hover {
+            background-color: white; /* Darker accent color */
+        }
+
+        /* Styling for the Table section */
+        #Table {
+            background-color: #002b5c;
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        #Table table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        #Table th, #Table td {
+            border: 1px solid #004080;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #Table th {
+            background-color: #001f3f;
+            color: white;
+        }
+
+        #Table tr:nth-child(even) {
+            background-color: #003366;
+        }
+
+        #Table h1 {
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            #About\ Us, #Contact, #Table {
+                width: 95%;
+            }
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+            background-size: cover;
+        }
+
+        .facebook-icon {
+             background-image: url('assets/facebook-icon.png');
+        }
+
+        .twitter-icon {
+            background-image: url('assets/twitter-icon.png');
+        }
+
+        .instagram-icon {
+            background-image: url('assets/instagram-icon.png');
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#Home"><span>Home</span></a>
+        <a href="#About\ Us"><span>About Us</span></a>
+        <a href="#Table"><span>Table</span></a>
+        <a href="#Contact"><span>Contact</span></a>
+    </nav>
+
+    <div id="Home">
+        <h1>Home Page</h1>
+        <img src="assets/Home.png" alt="Home">
+    </div>
+
+    <hr>
+
+    <div id="About Us">
+        <div class="about-content">
+            <div class="text-content">
+                <h2>About</h2>
+                <p>A beach is a coastal landform consisting of a stretch of sand, pebbles, 
+                    or rocks along the shoreline, where land meets the sea or another body 
+                    of water. Beaches are dynamic environments shaped by the action of waves, 
+                    tides, and currents. They vary widely in size, shape, and composition, 
+                    ranging from long, sandy shores to rocky coves. Beaches serve as popular 
+                    recreational destinations for activities such as swimming, sunbathing, 
+                    and beachcombing. They also provide habitats for diverse marine life and 
+                    are important ecosystems for coastal communities.</p>
+                
+                <ul>Skills
+                    <li>Flutter</li>
+                    <li>React</li>
+                    <li>Backend</li>
+                </ul>
+                <ol>Hobbies
+                    <li>Reading Books</li>
+                    <li>Basketball</li>
+                </ol>
+            </div>
+            <div class="image-content">
+                <img src="assets/about.png" alt="About" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+    
+
+    <hr>
+
+    <div id="Contact">
+        <form>
+            <h1>Contact</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+
+            <label for="reason">Reason to contact</label>
+            <select id="reason" name="reason">
+                <option value="buy">Buy products</option>
+                <option value="sell">Sell products</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div id="Table">
+        <h1>Table</h1>
+        <table>
+            <tr>
+                <th>S.N</th>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ram</td>
+                <td>Kalanki</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Hari</td>
+                <td>Kalanki</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Shyam</td>
+                <td>Kalanki</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<footer class="footer">
+    <p>&copy; 2024 Homepage. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="facebook-icon"></a>
+        <a href="https://twitter.com" target="_blank" class="twitter-icon"></a>
+        <a href="https://instagram.com" target="_blank" class="instagram-icon"></a>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="/js/myScript.js"></script> -->
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="brand" href="#">
+                <img src="asset/logo.png" alt="Logo" class="navbar-logo">
+                Gagets Nepal</a>
+            <ul class="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#AboutUs">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#OurProducts">Shop</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="#" id="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <!-- Cart Dropdown -->
+            <div id="cart-dropdown" class="cart-dropdown">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+                <div class="cart-total">
+                    <strong>Total:</strong> $<span id="cart-total">0.00</span>
+                </div>
+                <button id="checkout-button">Checkout</button>
+            </div>
+        </div>
+
+
+            
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div id="Home">
+        <div class="content">
+            <h1>New Arrivals</h1>
+            <p>Our new collection of Products<br> 
+                delivered to your door</p>
+
+                <a href="#" class="shopping-button" onclick="redirectToLogin()">Shop Now</a>
+        </div>
+        <!-- <div id="image">
+            <img id="img" src="asset/w3.png" width="300">
+            <img id="img" src="asset/w4.png" width="300">
+            <img id="img" src="asset/sw1.png" width="300">
+            <img id="img" src="asset/img3.png" width="300">
+        </div> -->
+        
+    </div>
+
+    <!-- <div class="carousel-container">
+        <button class="left-button" onclick="scrollCarousel(-1)">&#8249;</button>
+        <div class="carousel-track">
+            <img src="asset/w3.png" alt="Image 1">
+            <img src="asset/w4.png" alt="Image 2">
+            <img src="asset/w5.png" alt="Image 3">
+        </div>
+        <button class="right-button" onclick="scrollCarousel(1)">&#8250;</button>
+    </div> -->
+
+    
+<!-- <button onclick="document.getElementById('img').src='asset/w3.png';"><</button>
+<button onclick="document.getElementById('img').src='asset/w4.png';">></button> -->
+
+
+    <div id="AboutUs" class="about-container">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Welcome to Gagets Nepal, your one-stop destination for premium electronic
+                    gadgets and accessories. We offer a wide range of products, including smartphones, 
+                    laptops, headphones, smartwatches, and more, from top brands at unbeatable prices. 
+                    Our mission is to bring you cutting-edge technology with exceptional quality and 
+                    service. Shop confidently with secure payments, fast delivery, and reliable customer 
+                    support. Discover the perfect tech solutions to elevate your lifestyle with Gagets Nepal.
+                </p>
+            </div>
+            <img src="asset/image7.png" alt="About">
+        </div>
+    </div>
+
+
+    <div id="OurProducts">
+        <h1>Shop Products</h1>
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="asset/headphone.png" alt="Headphone" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Zebronics Aeon Headphone</h3>
+                    110 Hours Playback | Rapid Charging 
+                    <!-- (10min charge for 10h* use) | Gaming Mode (Low Latency) | Voice assistant support -->
+                    <p class="product-price">Rs. 1200(10min charge 10h* use)</p>
+                    <a href="#" class="view-button" onclick="redirectToCart()">Add to Cart</a>
+                    <a href="#" class="view-button" onclick="redirectToLogin()">Buy Now</a>
+                    
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="asset/xpsL.png" alt="Laptop" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Dell XPS 13 9315 </h3>
+                    Specifications 13.4” FHD Touch, Intel i7-1250U
+                    <p class="product-price">Rs. 2,10,000 (16/512GB)</p>
+                    <a href="#" class="view-button" onclick="redirectToCart()">Add to Cart</a>
+                    <a href="#" class="view-button" onclick="redirectToLogin()">Buy Now</a>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="asset/i16.png" alt="Mobile" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Apple iPhone 16 Pro Max</h3>
+                    6.9 inch Super Retina XDR OLED Display 
+                    <!-- | A18 chip | Pro Camera System -->
+                    <p class="product-price">Rs. 1500(A18 chip)</p>
+                    <a href="#" class="view-button" onclick="redirectToCart()">Add to Cart</a>
+                    <a href="#" class="view-button" onclick="redirectToLogin()">Buy Now</a>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="asset/w1.png" alt="watch" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Timex Men's Expedition Acadia 40mm Watch </h3>
+                    Black Case Black Dial with Black & Brown Leather & Fabric Strap
+                    <p class="product-price">Rs. 1500</p>
+                    <a href="#" class="view-button" onclick="redirectToCart()">Add to Cart</a>
+                    <a href="#" class="view-button" onclick="redirectToLogin()">Buy Now</a>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="asset/infinixnote.png" alt="Mobile" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Infinix Note 30 </h3>
+                    6.78-inches IPS LCD, Full HD (1920 x 1800 pixels)
+                     <!-- 120Hz refresh rate.8GB RAM, 256GB storage -->
+                    <p class="product-price">Rs. 1500(8GB RAM, 256GB)</p>
+                    <a href="#" class="view-button" onclick="redirectToCart()">Add to Cart</a>
+                    <a href="#" class="view-button" onclick="redirectToLogin()">Buy Now</a>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="asset/smartwatch1.png" alt="Mobile" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">UMIDIGI Uwatch 5S</h3>
+                    1.70 TFT LCD, touch, anti-fingerprint coating.400 mAh
+                    <!-- , 10 days on general usage, up to 40 days on standby mode -->
+                    <p class="product-price">Rs. 2399(10days general usage)</p>
+                    <a href="#" class="view-button" onclick="redirectToCart()">Add to Cart</a>
+                    <a href="#" class="view-button" onclick="redirectToLogin()">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function redirectToLogin() {
+            window.location.href = "login.html";
+        }
+
+        function redirectToCart() {
+            // Logic to add items to cart (just a placeholder here)
+            alert("Item added to cart!");
+        }
+    </script>
+
+
+<div id="Contact">
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> Gagets@gmail.com</p>
+        <p><strong>Phone:</strong> 9819988777</p>
+        <p><strong>Address:</strong> Kalanki, Kathmandu, Nepal</p>
+    </div>
+</div>
+
+    
+
+
+
+    <!-- Map Section -->
+    <div id="Map">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.020970918079!2d85.2806539!3d27.6931052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb187a97f390b1%3A0xec3f47092df0d4ca!2sKalanki%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1700397361258!5m2!1sen!2snp"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="facebook-icon"></a>
+            <a href="https://twitter.com" target="_blank" class="twitter-icon"></a>
+            <a href="https://instagram.com" target="_blank" class="instagram-icon"></a>
+        </div>
+    </footer>
+</body>
+</html>
