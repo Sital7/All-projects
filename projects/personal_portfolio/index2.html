@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="/js/Script.js"></script>
+    
+</head>
+<body>
+    <!-- hello world -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="brand" href="#">
+                <img src="assets3/logo.png" alt="Logo" class="navbar-logo">
+                portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#AboutUs">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <!-- <li><a href="#Service">Service</a></li> -->
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+
+    <div id="home">
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="hero">
+            <div class="hero-text">
+                <h2>Hello, I am</h2>
+                <h1>Sital Khatri</h1>
+                <p>A Passionate Front-End Developer</p>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary" onclick="alert('Hire Me!')">Hire Me</a>
+                    <a href="#" class="btn btn-secondary" onclick="alert('Downloading CV...')">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets3/p1.png" alt="Profile Image">
+                <!-- <img src="assets3/p1.png" alt="Profile Image"> -->
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    gsap.from(".hero-text h1", { y: 50, opacity: 0, duration: 1 });
+    gsap.from(".hero-text h2", { y: 50, opacity: 0, duration: 1.2 });
+    gsap.from(".hero-text p", { y: 50, opacity: 0, duration: 1.4 });
+    gsap.from(".hero-image img", { scale: 0.8, opacity: 0, duration: 1.6 });
+</script>
+    
+    
+    
+
+
+
+    <div id="AboutUs" class="about-container">
+        <h3>My Intro</h3>
+        <h2>About Me</h2>
+        <div class="about-content"> 
+            <div class="about-text">
+                <p>
+                    I am a passionate front-end developer with a keen eye for design 
+                    and a love for crafting user-friendly, responsive, and visually 
+                    appealing websites. Proficient in modern web technologies like HTML, 
+                    CSS, JavaScript, and frameworks like React, I strive to bring creative 
+                    ideas to life and deliver seamless digital experiences. Always eager to 
+                    learn and grow, I thrive in collaborative environments that challenge me 
+                    to push the boundaries of web development.
+
+
+                </p>
+                <div class="detail">
+                    <p><strong>Name:</strong>Sital Khatri</p>
+                    <p><strong>Date of birth:</strong>May 2001</p>
+                    <p><strong>Address:</strong>Kalanki,Kathmandu</p>
+                    <p><strong>Zip code:</strong>44600</p>
+                    <p><strong>Email:</strong>Sheetal5@gmail.com</p>
+                    <p><strong>Phone:</strong>9877665549</p>
+                </div>
+            </div>
+            <img src="assets3/p1.png" alt="About">
+        </div>
+    </div>
+
+
+
+    <section class="skills-section" id="skills-section">
+        <div class="container">
+            <div class="heading text-center">
+                <span class="subheading">Skills</span>
+                <h2>My Skills</h2>
+                <p class="skills-paragraph">I possess a diverse set of technical skills that enable 
+                    me to build dynamic, responsive, and visually stunning web 
+                    applications. From crafting clean and structured code to 
+                    ensuring exceptional user experiences, these skills reflect 
+                    my dedication to continuous learning and innovation in front-end 
+                    development.</p>
+            </div>
+            <div class="skills-row">
+                <div class="skill">
+                    <h3 class="skill-title">HTML</h3>
+                    <div class="progress-circle" data-value="98">
+                        <div class="progress-value">98%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3 class="skill-title">CSS</h3>
+                    <div class="progress-circle" data-value="95">
+                        <div class="progress-value">95%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3 class="skill-title">JavaScript</h3>
+                    <div class="progress-circle" data-value="80">
+                        <div class="progress-value">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3 class="skill-title">React</h3>
+                    <div class="progress-circle" data-value="75">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    
+
+    <div class="Project">
+        <h3>Accomplishments</h3>
+        <h1>Our Project</h1>
+        <p class="Project-paragraph">Over the years, I've worked on a variety of projects, 
+            from personal portfolios to complex e-commerce platforms. 
+            These projects reflect my passion for clean code, user-centered 
+            design, and innovative solutions. My goal is to create impactful 
+            web applications that solve real-world problems.</p>
+    
+        <div id="Project">
+            <div class="project-container">
+                <!-- Project 1 -->
+                <div class="project-card" onclick="showCompanyName('Company 1')">
+                    <img src="assets3/pr1.png" alt="project1" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-name">Ecommerce Website</h3>
+                        <p class="company-name"></p> <!-- Hidden until interaction -->
+                    </div>
+                </div>
+    
+                <!-- Project 2 -->
+                <div class="project-card" onclick="showCompanyName('Company 2')">
+                    <img src="assets3/pr2.png" alt="project2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-name">Gagets Nepal Website</h3>
+                        <p class="company-name"></p> <!-- Hidden until interaction -->
+                    </div>
+                </div>
+    
+                <!-- Project 3 -->
+                <div class="project-card" onclick="showCompanyName('Company 3')">
+                    <img src="assets3/pr4.png" alt="project3" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-name"> Meropizza Website</h3>
+                        <p class="company-name"></p> <!-- Hidden until interaction -->
+                    </div>
+                </div>
+    
+                <!-- Project 4 -->
+                <div class="project-card" onclick="showCompanyName('Company 4')">
+                    <img src="assets3/pr5.png" alt="project4" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-name">Hamro Hotel Website</h3>
+                        <p class="company-name"></p> <!-- Hidden until interaction -->
+                    </div>
+                </div>
+    
+                <!-- Project 5 -->
+                <div class="project-card" onclick="showCompanyName('Company 5')">
+                    <img src="assets3/pr6.png" alt="project5" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-name">Electronic Ecommerce Website</h3>
+                        <p class="company-name"></p> <!-- Hidden until interaction -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="Contact">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <h1>Have a Project?</h1>
+            <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="Subject" name="Subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><img src="assets3/email.png" alt="Email">
+                <strong>Email:</strong> Sheetal5@gmail.com</p> 
+            <p><img src="assets3/phone.png" alt="Phone">
+                <strong>Phone:</strong> 9877665549</p>
+            <p><img src="assets3/location.png" alt="Address">
+                <strong>Address:</strong> Kalanki, Kathmandu, Nepal </p>
+        </div>
+    </div>
+
+
+
+
+    <!-- Blog Section -->
+    <div id="Blog">
+        <h2>Blog</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <!-- <img src="assets3/pr1.png" alt="Blog Image 1"> -->
+                <img src="assets3/pr2.png" alt="Blog Image 1">
+                <h3></h3>
+                <p>
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="facebook-icon"></a>
+            <a href="https://twitter.com" target="_blank" class="twitter-icon"></a>
+            <a href="https://instagram.com" target="_blank" class="instagram-icon"></a>
+        </div>
+    </footer>
+</body>
+</html>

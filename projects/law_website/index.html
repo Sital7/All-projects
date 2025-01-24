@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Room Booking</title>
+    
+    <style>
+        /* hello world */
+    </style>
+
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a class="brand" href="#">
+                <img src="assets/logo.png" alt="Logo" class="navbar-logo">
+                My Website</a>
+            <ul class="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#AboutUs">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Page</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./signup.html">Sign Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="Home">
+        <div class="content">
+            <h1>Notary Public & Legal Solutions</h1>
+            <p>Notary Public services authenticate legal documents,<br> 
+                while legal solutions offer expert guidance and<br> 
+                representation for diverse legal needs.</p>
+        </div>
+
+        <form>
+            <h2>Book an Appointment</h2>
+            <input type="text" name="Name" placeholder="Name" required><br><br>
+            <input type="email" name="Email" placeholder="Email" required><br><br>
+            <div class="date-container">
+                <input type="date" name="AppointmentDate" required>
+            </div><br><br>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+
+    <div id="AboutUs" class="about-container">
+        <h2>We Provide Highly Reliable &<br> Effective Legal Solutions</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Our legal services are designed to address a wide range of 
+                    legal issues. Whether you need assistance with family law, 
+                    corporate law, property disputes, or criminal cases, our 
+                    expert team of lawyers is here to help. We offer convenient 
+                    online appointment booking for consultations, ensuring 
+                    personalized guidance tailored to your specific legal needs. 
+                    Book your appointment today and let us provide you with reliable 
+                    and effective solutions.
+                </p>
+                <button>Book an appointment</button>
+            </div>
+            <img src="assets/img1.png" alt="About">
+        </div>
+    </div>
+
+    <div id="PracticeAreas"> 
+        <h1>Practice Areas</h1>
+        <div class="Area-container">
+            <!-- card 1 -->
+            <div class="practicearea card">
+                <img src="assets/logo1.png" alt="Logo" class="card-logo">
+                <div class="Area-details">
+                    <h3>Bankruptcy Law</h3>
+                    <p>Bankruptcy law provides legal solutions for individuals or businesses to manage or eliminate debt while offering protection from creditors.</p>
+                </div>
+            </div>
+            
+            <!-- card 2 -->
+            <div class="practicearea card">
+                <img src="assets/logo2.png" alt="Logo" class="card-logo">
+                <div class="Area-details">
+                    <h3>Family Law</h3>
+                    <p>Family law addresses legal matters related to family relationships, including marriage, divorce, child custody, and adoption.</p>
+                </div>
+            </div>
+            
+            <!-- card 3 -->
+            <div class="practicearea card">
+                <img src="assets/logo3.png" alt="Logo" class="card-logo">
+                <div class="Area-details">
+                    <h3>Criminal Defense</h3>
+                    <p>Criminal defense involves legal representation and advocacy for individuals accused of crimes to protect their rights and ensure a fair trial.</p>
+                </div>
+            </div>
+            
+            <!-- card 4 -->
+            <div class="practicearea card">
+                <img src="assets/logo4.png" alt="Logo" class="card-logo">
+                <div class="Area-details">
+                    <h3>Corporate Law</h3>
+                    <p>Corporate law governs the formation, operation, and compliance of businesses, addressing legal matters like contracts, mergers, and governance.</p>
+                </div>
+            </div>
+
+             <!-- card 5 -->
+             <div class="practicearea card">
+                <img src="assets/logo5.png" alt="Logo" class="card-logo">
+                <div class="Area-details">
+                    <h3>Business Law</h3>
+                    <p>Business law covers legal aspects related to starting, operating, and managing a business, including contracts, disputes, and regulatory compliance.</p>
+                </div>
+            </div>
+
+             <!-- card 4 -->
+             <div class="practicearea card">
+                <img src="assets/logo6.png" alt="Logo" class="card-logo">
+                <div class="Area-details">
+                    <h3>Immigration Law</h3>
+                    <p>Immigration law deals with the legal processes and regulations governing the entry, stay, and rights of individuals in a country.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- location -->
+  <div class="map">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.020970918079!2d85.2806539!3d27.6931052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb187a97f390b1%3A0xec3f47092df0d4ca!2sKalanki%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1700397361258!5m2!1sen!2snp" 
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>  
+    
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#AboutUs">About Us</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#PracticeAreas">Practice Areas</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Blog">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#PrivacyPolicy">Privacy Policy</a></li>
+                <li><a href="#TermsOfService">Terms of Service</a></li>
+                <li><a href="#LegalDocuments">Legal Documents</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#Careers">Careers</a></li>
+                <li><a href="#OurTeam">Our Team</a></li>
+                <li><a href="#Partners">Partners</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="facebook-icon"></a>
+        <a href="https://twitter.com" target="_blank" class="twitter-icon"></a>
+        <a href="https://instagram.com" target="_blank" class="instagram-icon"></a>
+    </div>
+
+</footer>
+</body>
+</html>
