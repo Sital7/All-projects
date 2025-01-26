@@ -7,13 +7,16 @@
         padding: 0;
         box-sizing: border-box;
     }
-    
-
 
     body {
         font-family: Arial, Helvetica, sans-serif;
         background:  #b5b7fc;
         color: rgb(35, 33, 33);
+    }
+    .h1{
+      display: flex;
+      margin: 15px 0;
+      justify-content: center;
     }
     .container {
         align-items: center;
@@ -24,6 +27,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .form-group {
         margin-bottom: 15px;
     }
@@ -61,13 +65,12 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        align-items: center;
         width: 100%;
     }
     .submit-btn:hover {
         background-color: #0056b3;
     }
-    /* Modal Styles */
+    Modal Styles
     .modal {
         display: none;
         position: fixed;
@@ -101,20 +104,19 @@
         background-color: #0056b3;
     }
 
-
-    .password{
+    .password {
       display: inline-block;
       position: relative;
       border: 1px solid #b0a1a1;
       border-radius: 4px;
       width: 100%;
     }
-    .password input{
+    .password input {
       padding: 10px 5px;
       outline: none;
       border: 0;
     }
-    .pass-icon{
+    .pass-icon {
       position: absolute;
       width: 24px;
       top: 10px;
@@ -123,16 +125,15 @@
     }
 
     /* to solve default pass icon */
-    
     input[type=password]::-ms-reveal,
-    input[type=password]::-ms-clear
-    {
-    display: none;
-   }
+    input[type=password]::-ms-clear {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <h1 class="h1">FORM VALIDATION</h1><br>
     <form id="myForm" onsubmit="return handleSubmit(event)">
       <div class="form-group">
         <label for="email">Email:</label>
@@ -143,16 +144,18 @@
       <div class="form-group">
         <label for="password">Password:</label>
         <div class="password">
-        <input type="password" id="password" placeholder="Enter your password">
-        <img src="assets/pass-hide.png" onclick="pass()" class="pass-icon" id="pass-icon"></div>
+          <input type="password" id="password" placeholder="Enter your password">
+          <img src="assets/pass-hide.png" onclick="togglePasswordVisibility('password', 'pass-icon')" class="pass-icon" id="pass-icon">
+        </div>
         <div class="error" id="passwordError"></div>
       </div>
 
       <div class="form-group">
         <label for="confirmPassword">Confirm Password:</label>
-        <div class="confirmPass"></div>
-        <input type="password" id="confirmPassword" placeholder="ReEnter your password">
-        <img src="assets/pass-hide.png" onclick="pass()" class="pass-icon" id="pass-icon"></div>
+        <div class="password">
+          <input type="password" id="confirmPassword" placeholder="Re-enter your password">
+          <img src="assets/pass-hide.png" onclick="togglePasswordVisibility('confirmPassword', 'confirmPass-icon')" class="pass-icon" id="confirmPass-icon">
+        </div>
         <div class="error" id="confirmPasswordError"></div>
       </div>
 
@@ -160,7 +163,7 @@
     </form>
   </div>
 
-  <!-- Popup Modal -->
+  Popup Modal
   <div id="popupModal" class="modal">
     <div class="modal-content">
       <h2>Form Submitted Successfully!</h2>
@@ -218,19 +221,17 @@
       document.getElementById("popupModal").style.display = "none";
     }
 
-
-  var a;
-  function pass(){
-    if(a==1){
-      document.getElementById("password").type="password";
-      document.getElementById('pass-icon'). src='assets/pass-hide.png';
-      a=0;
-    }else{
-      document.getElementById("password").type='text';
-      document.getElementById('pass-icon').src = 'assets/pass-show.png';
-      a=1;
+    function togglePasswordVisibility(inputId, iconId) {
+      const inputField = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (inputField.type === "password") {
+        inputField.type = "text";
+        icon.src = "assets/pass-show.png";
+      } else {
+        inputField.type = "password";
+        icon.src = "assets/pass-hide.png";
+      }
     }
-  }
   </script>
 </body>
 </html>
