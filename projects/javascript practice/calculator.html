@@ -9,47 +9,68 @@
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
 
         .calculator{
             border-radius: 10px;
             display: inline-block;
             border: 1px solid #ccc;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0.1);
-            
+            background-color: white;
         }
 
         .display{
-            width: 88%;
-            height: 50%;
-            margin-bottom: 10px;
-            font-size: 1.5em;
+            width: 350px;
+            height: 60px;  
+            margin-bottom: 20px;
+            font-size: 2em;  
             text-align: right;
-            padding: 20px;
+            padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: nowrap;
         }
 
         .buttons{
             display: grid;
             grid-template-columns: repeat(4,1fr);
-            gap:10px;
+            gap: 10px;
+            grid-template-rows: repeat(5, 50px);  
         }
 
         .button{
-            height: 50px;
-            font-size: 1.2em;
+            font-size: 1.5em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             background-color: blue;
-            transition: background-color 0.2sec;
-            height: 80%;
-            width: 100%;
+            transition: background-color 0.2s;
+            height: 100%;
         }
-        button:hover{
+
+        .button:hover{
             background-color: #ddd;
+        }
+
+        button.operator, button.clear, button.equals{
+            background-color: antiquewhite;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .number{
+            background-color: #f0f0f0;
+            height: 100%;
+            font-size: 1.5em;
+            border-radius: 8px;
         }
 
         button.operator{
@@ -66,20 +87,15 @@
         button.equals{
             background-color: antiquewhite;
             border-radius: 8px;
+            width: 325%;
         }
 
-        .number {
-            height: 50px; 
-            font-size: 1.5em;
-            width: 100%; 
-            border-radius: 8px;
-}
     </style>
 </head>
 <body>
     <div class="calculator">
-        <h1> CALCULATOR</h1>
-        <input type="text" id="display" class="display" disabled>
+        <h1>CALCULATOR</h1>
+        <div id="display" class="display"></div>
         <div class="buttons">
             <button class="number" onclick="appendNumber('7')">7</button>
             <button class="number" onclick="appendNumber('8')">8</button>
@@ -102,7 +118,7 @@
             <button class="operator" onclick="appendOperator('+')">+</button>
  
             <button class="operator" onclick="calculateSquare()">x²</button>
-            <button class="equals" style="grid-column: span 3;" onclick="calculateResult()">=</button>
+            <button class="equals" onclick="calculateResult()">=</button>
         </div>
     </div>
  
@@ -110,39 +126,41 @@
         let display = document.getElementById("display");
  
         function appendNumber(number) {
-            display.value += number;
+            display.innerHTML += number;
         }
  
         function appendOperator(operator) {
-            const lastChar = display.value[display.value.length - 1];
+            const lastChar = display.innerHTML[display.innerHTML.length - 1];
             if ("+-*/".includes(lastChar)) {
-                display.value = display.value.slice(0, -1); 
+                display.innerHTML = display.innerHTML.slice(0, -1); 
             }
-            display.value += operator;
+            display.innerHTML += operator;
         }
  
         function clearDisplay() {
-            display.value = "";
+            display.innerHTML = "";
         }
  
         function calculateResult() {
-            try {   
-                display.value = eval(display.value); 
+            try {
+                let result = eval(display.innerHTML); 
+                display.innerHTML = result; 
             } catch (error) {
-                display.value = "Error";
+                display.innerHTML = "Error";
             }
         }
  
         function calculateSquare() {
             try {
-                let currentValue = parseFloat(display.value);
+                let currentValue = parseFloat(display.innerHTML);
                 if (!isNaN(currentValue)) {
-                    display.value = currentValue ** 2; 
+                    let result = currentValue ** 2;
+                    display.innerHTML = `${currentValue}<sup>2</sup> = ${result}`;
                 } else {
-                    display.value = "Error"; 
+                    display.innerHTML = "Error"; 
                 }
             } catch (error) {
-                display.value = "Error"; 
+                display.innerHTML = "Error"; 
             }
         }
     </script>
