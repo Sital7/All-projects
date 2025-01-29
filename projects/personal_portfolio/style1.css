@@ -242,26 +242,23 @@ body {
 
 
 
-
-/* General Styling for the Container */
 .about-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align the content to the left */
+    align-items: flex-start; 
     justify-content: flex-start;
     padding: 40px;
-    background-color: #f4f4f4; /* Light gray background for contrast */
+    background-color: #f4f4f4; 
     font-family: 'Arial', sans-serif;
-    color: #333; /* Standard dark text color */
+    color: #333;
 }
 
-/* Header Styling */
 .about-container h3 {
     font-size: 1.5rem;
     margin-bottom: 5px;
     color: #555;
     letter-spacing: 1px;
-    text-align: left; /* Align header text to the left */
+    text-align: left; 
 }
 
 .about-container h2 {
@@ -269,25 +266,23 @@ body {
     margin-bottom: 20px;
     color: #222;
     font-weight: bold;
-    text-align: left; /* Align header text to the left */
+    text-align: left;
 }
 
-/* Flexbox for Content Layout */
 .about-content {
     display: flex;
-    justify-content: space-between; /* Space between the text and image */
+    justify-content: space-between; 
     max-width: 1200px;
     gap: 20px;
     margin: 20px 0;
     width: 100%;
 }
 
-/* Text Content Styling */
 .about-text {
     flex: 1;
     padding: 20px;
     text-align: left;
-    max-width: 600px; /* Limit the text width */
+    max-width: 600px; 
 }
 
 .about-text p {
@@ -301,7 +296,6 @@ body {
     color: #444;
 }
 
-/* Detail Section Styling */
 .detail p {
     margin-bottom: 10px;
     font-size: 1rem;
@@ -311,19 +305,17 @@ body {
     font-weight: bold;
 }
 
-/* Image Styling */
 .about-content img {
-    max-width: 40%; /* Limit the image width to 40% of the container */
+    max-width: 40%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px; /* Optional: for rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: for subtle shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .about-content {
-        flex-direction: column; /* Stack content on smaller screens */
+        flex-direction: column; 
         align-items: center;
     }
 
@@ -333,18 +325,12 @@ body {
     }
 
     .about-content img {
-        max-width: 80%; /* Reduce image size on smaller screens */
+        max-width: 80%; 
         margin-top: 20px;
     }
 }
 
 
-
-
-
-
-
-/* Contact Section */
 #Contact {
     display: flex;
     justify-content: space-between;
@@ -353,15 +339,13 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Creates a parallax effect */
-    gap: 20px; /* Space between the two sections */
+    background-attachment: fixed;
+    gap: 20px; 
 }
-
-/* Contact Form */
 .contact-form {
     flex: 1;
     max-width: 50%;
-    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -419,11 +403,10 @@ body {
     background-color: #0056b3;
 }
 
-/* Contact Information */
 .contact-info {
     flex: 1;
     max-width: 40%;
-    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -446,14 +429,13 @@ body {
 }
 
 .contact-info img {
-    width: 20px; /* Small icons */
+    width: 20px; 
     height: 20px;
     margin-right: 10px;
     display: inline-block;
     vertical-align: middle;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     #Contact {
         flex-direction: column;
@@ -466,7 +448,6 @@ body {
 }
 
 
-/* General Styling for the Section */
 .Project {
     text-align: center;
     padding: 40px;
@@ -499,15 +480,14 @@ body {
 
 
 
-/* Animation for Fade-In and Slide-Up */
 @keyframes fadeInUp {
     from {
-        opacity: 0; /* Start invisible */
-        transform: translateY(20px); /* Start slightly below */
+        opacity: 0; 
+        transform: translateY(20px); 
     }
     to {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Back to original position */
+        opacity: 1; 
+        transform: translateY(0);
     }
 }
 
@@ -524,14 +504,12 @@ body {
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    /* Add animation */
-    opacity: 0; /* Initially hidden */
-    animation: fadeInUp 1.5s ease-in-out forwards; /* Animation properties */
-    animation-delay: 0.5s; /* Optional: Delay before animation starts */
+    opacity: 0; 
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
     
 }
 
-/* Grid Layout for Project Cards */
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -541,7 +519,6 @@ body {
     padding: 0 20px;
 }
 
-/* Individual Card Styling */
 .project-card {
     background: #fff;
     border-radius: 10px;
@@ -556,7 +533,6 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Image Styling */
 .project-image {
     width: 100%;
     height: 200px;
@@ -564,7 +540,6 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-/* Project Info Styling */
 .project-info {
     padding: 15px;
 }
@@ -575,7 +550,6 @@ body {
     margin: 10px 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .Project h1 {
         font-size: 1rem;
@@ -587,7 +561,6 @@ body {
 }
 
 
-/* Container styling */
 .skills-section {
     background-color: #f8f9fa;
     padding: 50px 0;
@@ -597,11 +570,10 @@ body {
     width: 80%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center align the content */
+    flex-direction: column; 
+    align-items: center;
 }
 
-/* Heading styles */
 .heading {
     text-align: center;
     margin-bottom: 40px;
@@ -622,19 +594,17 @@ body {
     color: #666;
 }
 
-/* Animation for Fade-In and Slide-Up */
 @keyframes fadeInUp {
     from {
-        opacity: 0; /* Start invisible */
-        transform: translateY(20px); /* Start slightly below */
+        opacity: 0; 
+        transform: translateY(20px);
     }
     to {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Back to original position */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
 
-/* Skills Section Paragraph Styling with Animation */
 .skills-paragraph {
     max-width: 1000px;
     margin: 0 auto;
@@ -647,41 +617,36 @@ body {
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    /* Add animation */
-    opacity: 0; /* Initially hidden */
-    animation: fadeInUp 1.5s ease-in-out forwards; /* Animation properties */
-    animation-delay: 0.5s; /* Optional: Delay before animation starts */
+    opacity: 0; 
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.5s; 
 }
 
 
 
-/* Skills section styles */
 .skills-row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px; /* Add gap between skill boxes */
-    width: 100%; /* Ensure the row takes full width */
-    margin-top: 40px; /* Add some margin from the heading */
+    gap: 30px; 
+    width: 100%; 
+    margin-top: 40px;
 }
 
-/* Individual skill boxes */
 .skill {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;  /* Ensure skill boxes are of equal size */
+    width: 200px;  
     text-align: center;
 }
 
-/* Title of the skill */
 .skill-title {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-/* Progress circle styles */
 .progress-circle {
     width: 100px;
     height: 100px;
@@ -700,7 +665,6 @@ body {
     font-weight: bold;
 }
 
-/* Dynamic Progress Fill */
 .progress-circle[data-value="98"] {
     background: conic-gradient(#3498db 0% 98%, #f0f0f0 98% 100%);
 }
@@ -718,7 +682,6 @@ body {
 }
 
 
-/* Blog Section */
 #Blog {
     padding: 40px 20px;
     background-color: #ddd;
