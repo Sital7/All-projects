@@ -160,37 +160,3 @@ table th {
 .category-btn:hover {
     opacity: 0.8;
 }
-
-
-
-/* button.category-btn {
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px 0;
-    width: 100%;
-}
-
-button.category-btn:hover {
-    opacity: 0.8;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
-Existing styles */
