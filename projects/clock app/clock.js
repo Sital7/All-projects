@@ -1,3 +1,151 @@
+// let clockSection = document.getElementById("clockSection");
+// let countdownSection = document.getElementById("countdownSection");
+// let timerSection = document.getElementById("timerSection");
+// let countdownDisplay = document.getElementById("countdownDisplay");
+// let countdownInput = document.getElementById("countdownInput");
+// let timerDisplay = document.getElementById("timerDisplay");
+
+// let hrs = document.getElementById("hrs");
+// let min = document.getElementById("min");
+// let sec = document.getElementById("sec");
+// let period = document.getElementById("period");
+
+// let is12HourFormat = false;
+// let timerInterval, countdownInterval;
+// let timerSeconds = 0, countdownTime = 0;
+// let isTimerRunning = false, isCountdownRunning = false;
+
+// // Update clock every second
+// function updateClock() {
+//     let now = new Date();
+//     let hours = now.getHours();
+//     let minutes = now.getMinutes();
+//     let seconds = now.getSeconds();
+
+//     if (is12HourFormat) {
+//         period.textContent = hours >= 12 ? "PM" : "AM";
+//         hours = hours % 12 || 12;
+//     } else {
+//         period.textContent = "";
+//     }
+
+//     hrs.textContent = hours.toString().padStart(2, "0");
+//     min.textContent = minutes.toString().padStart(2, "0");
+//     sec.textContent = seconds.toString().padStart(2, "0");
+// }
+
+// setInterval(updateClock, 1000);
+
+// // Toggle 12-hour format
+// document.getElementById("toggleFormat").addEventListener("click", () => {
+//     is12HourFormat = !is12HourFormat;
+//     document.getElementById("toggleFormat").textContent = is12HourFormat
+//         ? "Switch to 24-hour format"
+//         : "Switch to 12-hour format";
+//     updateClock();
+// });
+
+// // Switch between sections
+// document.getElementById("showCountdown").addEventListener("click", () => {
+//     clockSection.style.display = "none";
+//     countdownSection.style.display = "block";
+// });
+
+// document.getElementById("showTimer").addEventListener("click", () => {
+//     clockSection.style.display = "none";
+//     timerSection.style.display = "block";
+// });
+
+// document.getElementById("backToClockCountdown").addEventListener("click", () => {
+//     countdownSection.style.display = "none";
+//     clockSection.style.display = "block";
+// });
+
+// document.getElementById("backToClockTimer").addEventListener("click", () => {
+//     timerSection.style.display = "none";
+//     clockSection.style.display = "block";
+// });
+
+// // Countdown Timer Logic
+// document.getElementById("startCountdown").addEventListener("click", () => {
+//     if (!isCountdownRunning) {
+//         countdownTime = parseInt(countdownInput.value) || 0;
+//         if (countdownTime > 0) {
+//             isCountdownRunning = true;
+//             countdownInterval = setInterval(updateCountdown, 1000);
+//         }
+//     }
+// });
+
+// document.getElementById("pauseCountdown").addEventListener("click", () => {
+//     if (isCountdownRunning) {
+//         clearInterval(countdownInterval);
+//         isCountdownRunning = false;
+//     }
+// });
+
+// document.getElementById("stopCountdown").addEventListener("click", () => {
+//     clearInterval(countdownInterval);
+//     countdownTime = 0;
+//     countdownDisplay.textContent = "00:00:00";
+//     isCountdownRunning = false;
+// });
+
+// function updateCountdown() {
+//     if (countdownTime > 0) {
+//         countdownTime--;
+//         let hrs = Math.floor(countdownTime / 3600);
+//         let mins = Math.floor((countdownTime % 3600) / 60);
+//         let secs = countdownTime % 60;
+//         countdownDisplay.textContent = 
+//             `${hrs.toString().padStart(2, "0")}:${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+//     } else {
+//         clearInterval(countdownInterval);
+//         isCountdownRunning = false;
+//     }
+// }
+
+// // Timer (Stopwatch) Logic
+// document.getElementById("startTimer").addEventListener("click", () => {
+//     if (!isTimerRunning) {
+//         isTimerRunning = true;
+//         timerInterval = setInterval(updateTimer, 1000);
+//     }
+// });
+
+// document.getElementById("pauseResumeTimer").addEventListener("click", () => {
+//     if (isTimerRunning) {
+//         clearInterval(timerInterval);
+//         isTimerRunning = false;
+//         document.getElementById("pauseResumeTimer").textContent = "Resume";
+//     } else {
+//         isTimerRunning = true;
+//         timerInterval = setInterval(updateTimer, 1000);
+//         document.getElementById("pauseResumeTimer").textContent = "Pause";
+//     }
+// });
+
+// document.getElementById("stopTimer").addEventListener("click", () => {
+//     clearInterval(timerInterval);
+//     timerSeconds = 0;
+//     timerDisplay.textContent = "00:00:00";
+//     isTimerRunning = false;
+//     document.getElementById("pauseResumeTimer").textContent = "Pause";
+// });
+
+// function updateTimer() {
+//     timerSeconds++;
+//     let hrs = Math.floor(timerSeconds / 3600);
+//     let mins = Math.floor((timerSeconds % 3600) / 60);
+//     let secs = timerSeconds % 60;
+//     timerDisplay.textContent = 
+//         `${hrs.toString().padStart(2, "0")}:${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+// }
+
+
+
+
+
 let clockSection = document.getElementById("clockSection");
 let countdownSection = document.getElementById("countdownSection");
 let timerSection = document.getElementById("timerSection");

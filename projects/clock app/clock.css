@@ -102,7 +102,6 @@
 }
 
 
-/* Styling for the icons */
 .icon-container {
     text-align: center;
     margin-bottom: 20px;
@@ -119,7 +118,7 @@
     transform: scale(1.1);
 }
 
-/* Countdown section */
+
 .countdown {
     text-align: center;
 }
@@ -139,14 +138,21 @@
 }
 
 
-#timerSection {
-    margin-top: 20px;
+/* #timerSection {
+    margin-top: 30px;
     text-align: center;
-}
+    justify-content:center;
+    align-items:center;
+} */
+ .timer{
+    text-align: center;
+    justify-content: center;
+
+ }
 
 #timerDisplay {
     font-size: 50px;
-    margin: 20px 0;
+    margin: 20px ;
 }
 
 #timerSection button {
